@@ -10,10 +10,13 @@
         </entry_point>
     </entry_points>
     <command><![CDATA[
+        mkdir ./inputs/ &&
+        ln -s '$input' ./inputs/ &&
         /opt/zeppelin/bin/zeppelin.sh 
     ]]>
     </command>
-    <inputs>
+    <inputs> 
+        <<incude inputs >
     </inputs>
     <outputs>
         <data name="file_output" format="txt" />
