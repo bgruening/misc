@@ -10,13 +10,22 @@
         </entry_point>
     </entry_points>
     <command><![CDATA[
+    #set datadir = 'inputdir/'
+    #set file_paths1 = []
+    mkdir -p inputdir &&
+    #for $input_file in $inputfiles
+        #set $file_path = $datadir + $input_file.element_identifier
+        ln -s '$input_file' '$file_path' &&
+        $file_paths1.append($file_path)
+    #end for
         /opt/zeppelin/bin/zeppelin.sh 
     ]]>
     </command>
     <inputs>
+       <param name="inputfiles" multiple="true" type="data" format="tabular" label="tabular file" help="table file format" />
     </inputs>
     <outputs>
-        <data name="file_output" format="txt" />
+       <data name="file_output" format="txt" label="Summary from ${tool.name} on ${on_string}"/>
     </outputs>
     <tests>
     </tests>
