@@ -10,13 +10,11 @@
         </entry_point>
     </entry_points>
     <command><![CDATA[
-    #set datadir = 'inputdir/'
-    #set file_paths1 = []
-    mkdir -p inputdir &&
+    #set datadir = 'input_directory/'
+    mkdir -p input_directory &&
     #for $input_file in $inputfiles
         #set $file_path = $datadir + $input_file.element_identifier
         ln -s '$input_file' '$file_path' &&
-        $file_paths1.append($file_path)
     #end for
         /opt/zeppelin/bin/zeppelin.sh 
     ]]>
