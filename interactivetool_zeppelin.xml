@@ -10,7 +10,7 @@
         </entry_point>
     </entry_points>
     <command><![CDATA[
-        docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.10.1
+        /opt/zeppelin/bin/zeppelin.sh 
     ]]>
     </command>
     <inputs>
