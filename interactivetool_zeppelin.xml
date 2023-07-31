@@ -1,4 +1,4 @@
-<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Zeppelin" version="1.0.0">
+<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="1.0.0">
     <description>Notebook</description>
     <requirements>
         <container type="docker">apache/zeppelin:0.10.1</container>
@@ -10,10 +10,9 @@
         </entry_point>
     </entry_points>
     <command><![CDATA[
-    #set datadir = 'input_directory/'
     mkdir -p input_directory &&
     #for $input_file in $inputfiles
-        #set $file_path = $datadir + $input_file.element_identifier
+        #set $file_path = './input_directory/' + '$input_file.element_identifier'
         ln -s '$input_file' '$file_path' &&
     #end for
         /opt/zeppelin/bin/zeppelin.sh 
@@ -30,15 +29,19 @@
     <help>
 <![CDATA[
 
+**What it does**
+
+Apache Zeppelin provides web-based notebook that enables data-driven,
+interactive data analytics and collaborative documents with SQL, Scala, Python, R and more.
+        
 ]]>
     </help>
     <citations>
        <citation type="bibtex">
        @misc{
-            author       = {Mike Thang - m.thang@qcif.edu.au },
-            title        = {{Zeppelin-Notebook -  Zeppelin Notebook }},
-            publisher    = {MT},
-            url          = {}
+            title        = {Apache Zeppelin},
+            publisher    = {Apache Foundation},
+            url          = {https://zeppelin.apache.org}
         }
     }</citation>
     </citations>
