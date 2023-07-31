@@ -1,5 +1,5 @@
-<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="zeppelin" version="1.0.0">
-    <description>Zeppelin Notebook</description>
+<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Zeppelin" version="1.0.0">
+    <description>Notebook</description>
     <requirements>
         <container type="docker">apache/zeppelin:0.10.1</container>
     </requirements>
