@@ -1,8 +1,5 @@
-<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="1.0.0">
+<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@" profile="@PROFILE@">
     <description>Notebook</description>
-    <requirements>
-        <container type="docker">apache/zeppelin:0.10.1</container>
-    </requirements>
     <entry_points>
         <entry_point name="Zeppelin Notebook" requires_domain="True">
             <port>8080</port>
