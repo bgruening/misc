@@ -1,4 +1,4 @@
-<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="1.0.0">
+<tool id="interactive_tool_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="1.0.0">
     <description>Notebook</description>
     <macros>
 	<token name="@TOOL_VERSION@">0.10.1</token>
