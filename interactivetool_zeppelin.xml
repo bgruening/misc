@@ -1,8 +1,6 @@
-<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@" profile="@PROFILE@">
+<tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="1.0.0">
     <description>Notebook</description>
     <token name="@TOOL_VERSION@">0.10.1</token>
-    <token name="@VERSION_SUFFIX@">0</token>
-    <token name="@PROFILE@">20.05</token>
     <xml name="requirements">
         <requirements>
                 <container type="docker">apache/zeppelin:@TOOL_VERSION@</container>
