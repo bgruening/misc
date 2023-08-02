@@ -1,9 +1,11 @@
 <tool id="interactive_zeppelin_notebook" tool_type="interactive" name="Apache Zeppelin" version="1.0.0">
     <description>Notebook</description>
-    <token name="@TOOL_VERSION@">0.10.1</token>
+    <macros>
+	<token name="@TOOL_VERSION@">0.10.1</token>
+    </macros>
     <xml name="requirements">
         <requirements>
-                <container type="docker">apache/zeppelin:@TOOL_VERSION@</container>
+                <container type="docker">apache/zeppelin:v@TOOL_VERSION@</container>
         </requirements>
     </xml>
     <xml name="xrefs">
