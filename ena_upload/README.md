@@ -10,5 +10,5 @@ The same ena upload tool has been tested on the following machine
 2) FAILED - VM on Pawsey
 3) FAILED - Galaxy Produciton and Dev
 
-- The root cause is due to the conn.unwrap of the storbinary function in the ftplib.py (see [line 502](https://github.com/python/cpython/blob/8b541c017ea92040add608b3e0ef8dc85e9e6060/Lib/ftplib.py#L502)
+- The root cause is due to the conn.unwrap of the storbinary function in the ftplib.py (see [line 502](https://github.com/python/cpython/blob/8b541c017ea92040add608b3e0ef8dc85e9e6060/Lib/ftplib.py#L502) )
 - To resolve this issue, comment out conn.unwrap() (line 502) and insert "pass" below the conn.wrap()
